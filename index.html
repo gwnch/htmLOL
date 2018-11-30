@@ -3,7 +3,7 @@
     
 <head>
     <title id="T1">Propositional Logic Final Project</title>
-    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
     
 <body>
@@ -11,20 +11,23 @@
     
 <!--navigation bar-->
 <ul>
-    <li><a class="active" href="#T1">Basics</a></li>
+    <li><a href="#T5">Basics</a></li>
     <li><a href="#T2">More Knowledge</a></li>
     <li><a href="#T3">Application</a></li>
     <li><a href="#T4">Practice</a></li>
 </ul>
     
-<h2 id="T1">The Basics</h2>
+<h2 id="T5">The Basics</h2>
 <p>At its most simplistic, propositions are statements that can either be true or false. An example of a propositional statement in English is: If the sun shines, then the birds start singing. This is likely true, unless you have some weird birds in your town. As well as expressing propositions in plain text, they can be translated into mathematical representation. 
 </p>
+
+<a href="https://www.google.com/search?q=crazy+bird&rlz=1C1CHBF_enUS758US758&source=lnms&tbm=isch&sa=X&ved=0ahUKEwissICJ4fTeAhWxtlkKHVOWBxwQ_AUIDigB&biw=1600&bih=789#imgrc=4Wbk-0sOKrdlJM">
+    <img src="https://image.shutterstock.com/image-illustration/crazy-birds-260nw-418233025.jpg" alt="weird bird" height="350" class="center">
+</a>
     
-<img src="https://image.shutterstock.com/image-illustration/crazy-birds-260nw-418233025.jpg" alt="weird bird" height="350" class="center">
+<p>To mathematically represent the proposition “If the sun shines, then the birds start singing” we first must translate the parts of the proposition into logical variables. Let’s use s and b, for sun and birds respectively. Now we will introduce the symbols that will help us complete the mathematical proposition.</p>
     
-<p>To mathematically represent the proposition “If the sun shines, then the birds start singing” we first must translate the parts of the proposition into logical variables. Let’s use s and b, for sun and birds respectively. Now we will introduce the symbols that will help us complete the mathematical proposition. 
-</p>
+<p><br></p>
 
 <table>
     <tr>
@@ -63,12 +66,255 @@
         <td>if and only if</td>
     </tr>
 </table>
+    
+<p><br>Our proposition is a conditional if/then statement, meaning that b is only true if s is true, if the sun shines. So we can represent the proposition mathematically as: s⇒b.</p>
 
 <h2 id="T2">More Knowledge</h2>
+    
+<h3>Other Methods of Representation</h3>
+    
+<p>Truth tables allow us to explore the relationship between the different parts of a proposition. A truth table for our proposition would be:</p>
+    
+<p><br></p>
+    
+<table id="small">
+    <tr>
+        <th>s</th>
+        <th>b</th>
+        <th>s⇒b</th>
+    </tr>
+    <tr>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+    </tr>
+    <tr>
+        <td>T</td>
+        <td>F</td>
+        <td>F</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>T</td>
+        <td>T</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>F</td>
+        <td>T</td>
+    </tr>
+</table>
+    
+<p><br>Since s and b are dependent on one another, the entire proposition is true when both are true and when both are false. Furthermore, the proposition is true when b is true because b is not exclusively reliant on s occurring (for example, if and only if).</p>
+    
+<p><br>The proposition s⇒b is pretty simple, but expressions can become much more complicated, including more than two variables and many operations. Our textbook provides a complex propositional expression: [(p∨q)∧((p′)∨r)]⇒[(p⇔q)∨(p∨r)]. Thankfully, we have a tool for understanding such complex expressions in terms of smaller propositions, called a parse tree. Here is a parse tree of this expression:</p>
+    
+<a href="https://discretestructures.tumblr.com/">
+    <p style="text-align: center;">
+        <img src="https://66.media.tumblr.com/82244320ae0e5e1b8d0c4a343d739254/tumblr_pizdd4Exln1y19ow7o1_400.png" alt="basic logic gates" height="300">
+    </p>
+</a>
+
+<p>Now we can create a truth table starting with the smaller terms, p, q, r, p′ etc</p>
+    
+<p><br></p>
+    
+<table id="large">
+    <tr>
+        <th>p</th>
+        <th>q</th>
+        <th>p∨q</th>
+        <th>p′</th>
+        <th>r</th>
+        <th>(p′)∨r</th>
+        <th>(p∨q)∧((p′)∨r)</th>
+        <th>p⇔q</th>
+        <th>p∨r</th>
+        <th>(p⇔q)∨(p∨r)</th>
+        <th>[(p∨q)∧((p′)∨r)]⇒[(p⇔q)∨(p∨r)]</th>
+    </tr>
+    <tr>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>F</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+    </tr>
+    <tr>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>F</th>
+        <th>F</th>
+        <th>F</th>
+        <th>F</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+    </tr>
+    <tr>
+        <th>T</th>
+        <th>F</th>
+        <th>T</th>
+        <th>F</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>F</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+    </tr>
+    <tr>
+        <th>T</th>
+        <th>F</th>
+        <th>T</th>
+        <th>F</th>
+        <th>F</th>
+        <th>F</th>
+        <th>F</th>
+        <th>F</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+    </tr>
+    <tr>
+        <th>F</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>F</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+    </tr>
+    <tr>
+        <th>F</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>F</th>
+        <th>T</th>
+        <th>T</th>
+        <th>F</th>
+        <th>F</th>
+        <th>F</th>
+        <th>F</th>
+    </tr>
+    <tr>
+        <th>F</th>
+        <th>F</th>
+        <th>F</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>F</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+        <th>T</th>
+    </tr>
+    <tr>
+        <th>F</th>
+        <th>F</th>
+        <th>F</th>
+        <th>T</th>
+        <th>F</th>
+        <th>T</th>
+        <th>F</th>
+        <th>T</th>
+        <th>F</th>
+        <th>T</th>
+        <th>T</th>
+    </tr>
+</table>
+    
+<p><br>If a propositional truth table contains all truths down the final column of the table, it is considered a tautology. If there are all falses, it is a contradiction. </p>
 
 <h2 id="T3">Application</h2>
 
+<h3>Gates</h3>
+    
+<p>It is easier to place importance on things learned in school if there is some direct real world application in addition to the valuation of knowledge for knowledge’s sake. Propositional logic is vital to computer hardware, since computer circuits are built using logic gates. The very operations we discussed above—not, and, or—are the ones used in logic gates. Pictured below are representations of these logic gates.</p>
+
+<a href="https://www.google.com/search?q=logic+gates&rlz=1C1CHBF_enUS758US758&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj-1riE-PXeAhVyUd8KHRQdDdUQ_AUIDigB#imgrc=H_-TzxLLbn7xhM">
+    <p style="text-align: center;">
+        <img src="https://cdn.instructables.com/F9R/WM4S/IYYTPKGL/F9RWM4SIYYTPKGL.LARGE.jpg" alt="basic logic gates" height="300">
+    </p>
+</a>
+    
+<p>The T and F of the truth tables and parse trees are converted into 1s and 0s, the language of computers. These gates can be combined to perform all sorts of operations. Information that is inputted yields information at an output which gives the computer a command, operating similar to a switch.</p>
+    
+<a href="https://www.quora.com/What-are-the-practical-applications-of-logic-gates">
+    <p style="text-align: center;">
+        <img src="https://qph.fs.quoracdn.net/main-qimg-72dd7f3fbfae97ba78626f44955a80f6" alt="shivering man">
+    </p>
+</a>
+
 <h2 id="T4">Practice</h2>
+    
+<h3>Test Your Understanding</h3>
+    
+<p>1) Match the symbol to its meaning in English</p>
+
+<table>
+    <tr>
+        <th>Symbol</th>
+        <th>Meaning</th>
+    </tr>
+    <tr>
+        <td>∨</td>
+        <td>not</td>
+    </tr>
+    <tr>
+        <td>⇔</td>
+        <td>and</td>
+    </tr>
+    <tr>
+        <td>′ or ~</td>
+        <td>(inclusive) or</td>
+    </tr>
+    <tr>
+        <td>∧</td>
+        <td>(exclusive) either/or</td>
+    </tr>
+    <tr>
+        <td>⇒</td>
+        <td>if/then</td>
+    </tr>
+    <tr>
+        <td>⊕</td>
+        <td>if and only if</td>
+    </tr>
+</table>
+    
+<p>2) Make a parse tree for (p∨q) ∧ (q∨r′)</p>
+    
+<p>3) Now make a truth table for (p∨q) ∧ (q∨r')</p>
+    
+<p>4) Translate this expression into a symbolic proposition: Either I pass computer science class or I get some sleep.</p>
+    
+<p>5) Create a truth table for p∧(p⇒q)∧q′. Is this a tautology or contradiction?</p>
+
+<p><br>And here are some fun phone apps where you can play with logic gates:</p>
+
+<a href="https://play.google.com/store/apps/details?id=pl.cyfrogen.gates.android&hl=en_US">
+    <p>GooglePlay</p>
+</a>
+    
+<a href="https://urldefense.proofpoint.com/v2/url?u=https-3A__itunes.apple.com_us_app_digital-2Dcircuit-2Dsimulator-2Dlite_id1131088003-3Fmt-3D8&d=DwIFAg&c=aqMfXOEvEJQh2iQMCb7Wy8l0sPnURkcqADc2guUW8IM&r=Il9GZY0o0F1U0dRNI0nVg4weCQAp-fB9gU0mBKFw3qc&m=3o--0tjrHqfqQ9Ywuh0DpSBItVY7jbqfQcHZW-Aax-I&s=BsCDLfxYzOdt8EKx4t5Mgfi7GO43-3Z-QDpjpPDqq20&e=">
+    <p>iTunes</p>
+</a>
     
 </body>
 
