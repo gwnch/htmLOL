@@ -39,11 +39,11 @@ li a {
 }
     
 li a:hover {
-    background-color: lavender;
+    background-color: dodgerblue;
 }
 
 .active {
-    background-color: lavender;
+    background-color: dodgerblue;
 }
 
 h2 {
