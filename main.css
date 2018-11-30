@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
-<title>CSS for Website</title>
 <meta charset= "utf-8">
 <meta name= "viewport" content= "width=device-width, initial-scale=1">
-
-<style>
 
 * {
     box-sizing: border-box;
@@ -62,6 +54,11 @@ h2 {
     background-color: lavender;
 }
 
+h3  {
+    font-family: Verdana, Geneva, sans-serif;
+    padding-left: 30px;
+}
+
 .center {
     display: block;
     margin-left: auto;
@@ -82,12 +79,30 @@ table {
     margin-right: 25%
 }
 
+table#small {
+    font-size: 20;
+    font-family: Verdana, Geneva, sans-serif;
+    border-collapse: collapse;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+table#large {
+    font-size: 20;
+    font-family: Verdana, Geneva, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 th {
-    text-align: left;
+    text-align: center;
 }
 
 th, td {
-    padding: 7px;
+    padding: 6px;
 }
 
 p {
@@ -95,7 +110,3 @@ p {
     font-family: Verdana, Geneva, sans-serif;
     padding-left: 30px;
 }
-
-</head>
-</style>
-</html>
