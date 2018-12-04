@@ -7,22 +7,27 @@
 </head>
     
 <body>
-<h1>Propositional Logic</h1>
+    <h1>Propositional Logic</h1>
     
 <!--navigation bar-->
 <ul>
-    <li><a href="#T5">Basics</a></li>
-    <li><a href="#T2">More Knowledge</a></li>
-    <li><a href="#T3">Application</a></li>
-    <li><a href="#T4">Practice</a></li>
+    <li><a href="#T2">Basics</a></li>
+    <li><a href="#T3">Tables</a></li>
+    <li><a href="#T4">Parse Trees</a></li>
+    <li><a href="#T6">Application</a></li>
+    <li><a href="#T7">Review</a></li>
+    <li><a href="#T8">Practice</a></li>
 </ul>
     
-<h2 id="T5">The Basics</h2>
-<p>At its most simplistic, propositions are statements that can either be true or false. An example of a propositional statement in English is: If the sun shines, then the birds start singing. This is likely true, unless you have some weird birds in your town. As well as expressing propositions in plain text, they can be translated into mathematical representation. 
-</p>
+<h2 id="T2">The Basics</h2>
+    
+<article id="left"> 
+    <p><br><br>At its most simplistic, propositions are statements that can either be true or false. An example of a propositional statement in English is: If the sun shines, then the birds start singing. <br><br><br>This is likely true, unless you have some weird birds in your town. As well as expressing propositions in plain text, they can be translated into mathematical representation. 
+    </p>
+</article>
 
 <a href="https://www.google.com/search?q=crazy+bird&rlz=1C1CHBF_enUS758US758&source=lnms&tbm=isch&sa=X&ved=0ahUKEwissICJ4fTeAhWxtlkKHVOWBxwQ_AUIDigB&biw=1600&bih=789#imgrc=4Wbk-0sOKrdlJM">
-    <img src="https://image.shutterstock.com/image-illustration/crazy-birds-260nw-418233025.jpg" alt="weird bird" height="350" class="center">
+    <img src="https://image.shutterstock.com/image-illustration/crazy-birds-260nw-418233025.jpg" alt="weird bird" height="270" class="center">
 </a>
     
 <p>To mathematically represent the proposition “If the sun shines, then the birds start singing” we first must translate the parts of the proposition into logical variables. Let’s use s and b, for sun and birds respectively. Now we will introduce the symbols that will help us complete the mathematical proposition.</p>
@@ -58,21 +63,19 @@
     <tr>
         <td>Conditional</td>
         <td>⇒</td>
-        <td>if/then</td>
+        <td>if/then, implies, only if, is sufficient for, is necessary for</td>
     </tr>
     <tr>
         <td>Biconditional</td>
         <td>⇔</td>
-        <td>if and only if</td>
+        <td>if and only if, is necessary and sufficient for, is logically equivalent to</td>
     </tr>
 </table>
     
 <p><br>Our proposition is a conditional if/then statement, meaning that b is only true if s is true, if the sun shines. So we can represent the proposition mathematically as: s⇒b.</p>
 
-<h2 id="T2">More Knowledge</h2>
-    
-<h3>Other Methods of Representation</h3>
-    
+<h2 id="T3">Tables</h2>
+        
 <p>Truth tables allow us to explore the relationship between the different parts of a proposition. A truth table for our proposition would be:</p>
     
 <p><br></p>
@@ -107,7 +110,130 @@
     
 <p><br>Since s and b are dependent on one another, the entire proposition is true when both are true and when both are false. Furthermore, the proposition is true when b is true because b is not exclusively reliant on s occurring (for example, if and only if).</p>
     
-<p><br>The proposition s⇒b is pretty simple, but expressions can become much more complicated, including more than two variables and many operations. Our textbook provides a complex propositional expression: [(p∨q)∧((p′)∨r)]⇒[(p⇔q)∨(p∨r)]. Thankfully, we have a tool for understanding such complex expressions in terms of smaller propositions, called a parse tree. Here is a parse tree of this expression:</p>
+<br><br><br>
+    
+<table id="small">
+    <tr>
+        <th>p</th>
+        <th>q</th>
+        <th>p∧q</th>
+    </tr>
+    <tr>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+    </tr>
+    <tr>
+        <td>T</td>
+        <td>F</td>
+        <td>F</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>T</td>
+        <td>F</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>F</td>
+        <td>F</td>
+    </tr>
+</table>
+    
+<br><br><br>
+        
+<table id="small">
+    <tr>
+        <th>p</th>
+        <th>q</th>
+        <th>p∨q</th>
+    </tr>
+    <tr>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+    </tr>
+    <tr>
+        <td>T</td>
+        <td>F</td>
+        <td>T</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>T</td>
+        <td>T</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>F</td>
+        <td>F</td>
+    </tr>
+</table>
+    
+    
+<br><br><br>
+        
+<table id="small">
+    <tr>
+        <th>p</th>
+        <th>q</th>
+        <th>p⊕q</th>
+    </tr>
+    <tr>
+        <td>T</td>
+        <td>T</td>
+        <td>F</td>
+    </tr>
+    <tr>
+        <td>T</td>
+        <td>F</td>
+        <td>T</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>T</td>
+        <td>T</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>F</td>
+        <td>F</td>
+    </tr>
+</table>
+    
+<br><br><br>
+        
+<table id="small">
+    <tr>
+        <th>p</th>
+        <th>q</th>
+        <th>p⇔q</th>
+    </tr>
+    <tr>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+    </tr>
+    <tr>
+        <td>T</td>
+        <td>F</td>
+        <td>F</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>T</td>
+        <td>F</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>F</td>
+        <td>T</td>
+    </tr>
+</table>
+    
+<h2 id="T4">Parse Trees</h2>
+    
+<p>The proposition s⇒b is pretty simple, but expressions can become much more complicated, including more than two variables and many operations. Our textbook provides a complex propositional expression: [(p∨q)∧((p′)∨r)]⇒[(p⇔q)∨(p∨r)]. Thankfully, we have a tool for understanding such complex expressions in terms of smaller propositions, called a parse tree. Here is a parse tree of this expression:</p>
     
 <a href="https://discretestructures.tumblr.com/">
     <p style="text-align: center;">
@@ -240,10 +366,8 @@
 </table>
     
 <p><br>If a propositional truth table contains all truths down the final column of the table, it is considered a tautology. If there are all falses, it is a contradiction. </p>
-
-<h2 id="T3">Application</h2>
-
-<h3>Gates</h3>
+    
+<h2 id="T6">Application</h2>
     
 <p>It is easier to place importance on things learned in school if there is some direct real world application in addition to the valuation of knowledge for knowledge’s sake. Propositional logic is vital to computer hardware, since computer circuits are built using logic gates. The very operations we discussed above—not, and, or—are the ones used in logic gates. Pictured below are representations of these logic gates.</p>
 
@@ -260,11 +384,17 @@
         <img src="https://qph.fs.quoracdn.net/main-qimg-72dd7f3fbfae97ba78626f44955a80f6" alt="shivering man">
     </p>
 </a>
+    
+<h2 id="T7">Review</h2>
+    
+<p>  Here are a couple of additional videos to help you review and refresh your memory: <br><br>
+    <a href="https://youtu.be/itrXYg41-V0">Introduction to Propositional Logic</a> 
+    <br><br>
+    <a href="https://youtu.be/gI-qXk7XojA">Boolean Logic and Logic Gates</a> 
+</p>
 
-<h2 id="T4">Practice</h2>
-    
-<h3>Test Your Understanding</h3>
-    
+<h2 id="T8">Practice</h2>
+        
 <p>1) Match the symbol to its meaning in English</p>
 
 <table>
